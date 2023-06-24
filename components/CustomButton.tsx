@@ -6,9 +6,15 @@ const CustomButton = ({
   containerStyles,
   title,
   handleClick,
+  btnType,
 }: CustomButtonProps) => {
   return (
-    <button className={`custom-btn ${containerStyles}`} onClick={handleClick}>
+    <button
+      disabled={false}
+      type={btnType || "button"}
+      className={`custom-btn ${containerStyles}`}
+      onClick={handleClick}
+    >
       <span className={`flex-1`}>{title}</span>
     </button>
   );
